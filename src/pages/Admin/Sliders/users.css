@@ -1,0 +1,125 @@
+.admin-users-container {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.admin-users-container h1 {
+    margin-top: 0;
+}
+
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 0.95rem;
+}
+
+.users-table th, 
+.users-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.users-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.users-table tbody tr:nth-of-type(even) {
+    background-color: #f9f9f9;
+}
+
+.users-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+
+
+.admin-users-container {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.admin-users-container h1 {
+    margin-top: 0;
+}
+
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 0.95rem;
+}
+
+.users-table th, 
+.users-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.users-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.users-table tbody tr:nth-of-type(even) {
+    background-color: #f9f9f9;
+}
+
+.users-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* --- NEW STYLES BELOW --- */
+
+/* Styles for the "Active" / "Blocked" status text */
+.status-active {
+    color: #27ae60; /* Green */
+    font-weight: bold;
+}
+
+.status-blocked {
+    color: #c0392b; /* Red */
+    font-weight: bold;
+}
+
+/* Container for the action buttons */
+.action-cell {
+    display: flex;
+    gap: 8px;
+}
+
+.action-cell button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: opacity 0.2s ease;
+}
+
+.action-cell button:hover {
+    opacity: 0.8;
+}
+
+/* Styles for the Block, Unblock, and Delete buttons */
+.block-btn {
+    background-color:gray; /* Orange */
+}
+
+.unblock-btn {
+    background-color: #2980b9; /* Blue */
+}
+
+.delete-btn {
+    background-color: #e74c3c; /* Red */
+}

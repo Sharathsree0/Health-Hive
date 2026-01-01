@@ -1,0 +1,89 @@
+.authcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px); 
+  background: #f4f6f9;
+  padding: 20px; 
+}
+form {
+  background: #ffffff;
+  padding: 25px 20px;
+  border-radius: 12px;
+  width: 400px;           
+  max-width: 90%;         
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+form h1 {
+  margin-bottom: 30px;
+  color: #222;
+  font-size: 30px;        
+  font-weight: bold;
+}
+form label {
+  display: block;
+  text-align: left;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 19px;
+}
+form input {
+  width: 380px;
+  padding: 12px;        
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+form input:focus {
+  outline: none;
+  border-color: #00a86b;
+  box-shadow: 0px 0px 5px rgba(0, 168, 107, 0.3);
+}
+form p {
+  color: red;
+  font-size: 17px;
+  margin: -6px 0 10px;
+  text-align: left;
+}
+form button {
+  width: 100%;
+  padding: 12px;
+  background: #00a86b;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+form button:hover {
+  background: #008f5a;
+}
+form a {
+  color: #00a86b;
+  text-decoration: none;
+  font-weight: 600;
+}
+form a:hover {
+  text-decoration: underline;
+}
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 60px);
+  background: #f4f6f9;
+}
+.login-container form {
+  background: #fff;
+  padding: 25px 20px;
+  border-radius: 12px;
+  width: 400px;         
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  text-align: center;
+}

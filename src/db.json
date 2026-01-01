@@ -1,0 +1,726 @@
+{
+  "users": [
+    {
+      "id": "ff0e",
+      "name": "hank",
+      "isAdmin": true,
+      "wishlist": [  ]
+    },
+    {
+      "id": "3f0c",
+      "name": "sharath sree",
+      "isAdmin": false,
+      "cart": [ ],
+      "isBlocked": true
+    },
+    {
+      "id": "0637",
+      "name": "Yahya Riswan",
+      "email": "yahyaRiswan@gmail.com",
+      "password": "1234567890",
+      "cart": [],
+      "wishlist": [],
+      "isAdmin": false,
+      "isBlocked": false
+    },
+    {
+      "id": "0a25",
+      "name": "anirudh",
+      "email": "anirudh@gmail.com",
+      "password": "1234567890",
+      "cart": [],
+      "wishlist": [],
+      "isAdmin": false,
+      "isBlocked": false
+    },
+    {
+      "id": "4be3",
+      "name": "hiba",
+      "email": "hiba@gmail.com",
+      "password": "1234567890",
+      "cart": [],
+      "wishlist": [],
+      "isAdmin": false,
+      "isBlocked": false
+    },
+    {
+      "id": "525b",
+      "name": "sinan",
+      "email": "sinan@gmail.com",
+      "password": "1234567890",
+      "cart": [],
+      "wishlist": [],
+      "isAdmin": false,
+      "isBlocked": true
+    },
+    {
+      "id": "9a1e",
+      "name": "shibili",
+      "email": "shibil@gmail.com",
+      "password": "1234567890",
+      "cart": [],
+      "wishlist": [],
+      "isAdmin": false,
+      "isBlocked": true
+    },
+    {
+      "id": "6117",
+      "name": "m@h!",
+      "isAdmin": false,
+      "cart": [  ],
+      "isBlocked": true
+    },
+    {
+      "id": "55bf",
+      "name": "adhil",
+      "email": "adhil@gmail.com",
+      "password": "1234567890",
+      "cart": [],
+      "wishlist": [],
+      "isAdmin": false,
+      "isBlocked": true
+    }
+  ],
+  "orders": [  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Hive Pumpkin Seeds",
+      "category": "Seeds",
+      "price": "200",
+      "image": "/Images/the pumkin seed.jpg",
+      "description": "Crunchy and nutritious pumpkin seeds, rich in antioxidants and healthy fats.",
+      "nutritionFacts": {
+        "servingSize": "28g (1 oz)",
+        "calories": 160,
+        "protein": "24g",
+        "carbs": "3g"
+      },
+      "isActive": true
+    },
+    {
+      "id": "2",
+      "name": "Hive Dry Grapes",
+      "category": "Dry Fruits",
+      "price": 180,
+      "image": "/Images/dry-grapes.webp",
+      "description": "Sweet and chewy dry grapes packed with natural energy and iron.",
+      "nutritionFacts": {
+        "servingSize": "40g (1 small box)",
+        "calories": 120,
+        "protein": "24g",
+        "carbs": "3g"
+      },
+      "isActive": true
+    },
+    {
+      "id": "3",
+      "name": "Hive Dates",
+      "category": "Dry Fruits",
+      "price": "150",
+      "image": "/Images/dates fruit.webp",
+      "description": "Naturally sweet dates full of fiber, vitamins, and minerals.",
+      "nutritionFacts": {
+        "servingSize": "30g (2-3 pieces)",
+        "calories": 100,
+        "protein": "24g",
+        "carbs": "3g"
+      },
+      "isActive": true
+    },
+    {
+      "id": "4",
+      "name": "Hive Peanuts",
+      "category": "Nuts",
+      "price": 150,
+      "image": "/Images/peanuts.webp",
+      "description": "Roasted peanuts, a crunchy snack rich in protein and healthy fats.",
+      "nutritionFacts": {
+        "servingSize": "28g (1 oz)",
+        "calories": 170,
+        "protein": "24g",
+        "carbs": "3g"
+      },
+      "isActive": true
+    },
+    {
+      "id": "5",
+      "name": "Hive Almonds",
+      "category": "Nuts",
+      "price": 300,
+      "image": "/Images/ALMOND-FACT-SHEET.webp",
+      "description": "Premium almonds loaded with vitamin E, magnesium, and antioxidants.",
+      "nutritionFacts": {
+        "servingSize": "28g (23 almonds)",
+        "calories": 160,
+        "protein": "24g",
+        "carbs": "3g"
+      },
+      "isActive": true
+    },
+    {
+      "id": "6",
+      "name": "Hive Amp Gold 100% Whey Protein",
+      "category": "Bodybuilding",
+      "price": 4999,
+      "image": "/Images/gold whey protein.avif",
+      "description": "Ultra-filtered whey protein for lean muscle growth and rapid recovery. 24g of protein per serving.",
+      "nutritionFacts": {
+        "servingSize": "1 Scoop (32g)",
+        "calories": 120,
+        "protein": "24g",
+        "carbs": "3g"
+      },
+      "isActive": true
+    },
+    {
+      "id": "7",
+      "name": "Hive Pure Creatine Monohydrate (500g)",
+      "category": "Bodybuilding",
+      "price": 1499,
+      "image": "/Images/Pure Creatine Monohydrate (500g).avif",
+      "description": "Micronized for better absorption, supports strength, power, and muscle growth.",
+      "nutritionFacts": {
+        "servingSize": "1 Scoop (5g)",
+        "creatineMonohydrate": "5g"
+      },
+      "isActive": true
+    },
+    {
+      "id": "8",
+      "name": "Hive Bulk 1340 Mass Gainer",
+      "category": "Bodybuilding",
+      "price": 3899,
+      "image": "/Images/Bulk 1340 Mass Gainer.avif",
+      "description": "High-calorie gainer designed for hard gainers to pack on size and strength fast. 50g of protein.",
+      "nutritionFacts": {
+        "servingSize": "2 Heaping Scoops (360g)",
+        "calories": 1340,
+        "protein": "50g",
+        "carbs": "277g"
+      },
+      "isActive": true
+    },
+    {
+      "id": "9",
+      "name": "Hive Night-Time Casein Protein",
+      "category": "Bodybuilding",
+      "price": 5299,
+      "image": "/Images/Night-Time Casein Protein.webp",
+      "description": "Slow-digesting protein that provides a sustained release of amino acids for overnight muscle repair.",
+      "nutritionFacts": {
+        "servingSize": "1 Scoop (34g)",
+        "calories": 120,
+        "protein": "24g"
+      },
+      "isActive": true
+    },
+    {
+      "id": "10",
+      "name": "Hive Fuel BCAA 5000",
+      "category": "Bodybuilding",
+      "price": 1999,
+      "image": "/Images/Fuel BCAA 5000.webp",
+      "description": "5g of pure Branched-Chain Amino Acids in a 2:1:1 ratio to support recovery and reduce muscle soreness.",
+      "nutritionFacts": {
+        "servingSize": "1 Scoop (7g)",
+        "lLeucine": "2.5g",
+        "lIsoleucine": "1.25g",
+        "lValine": "1.25g"
+      },
+      "isActive": true
+    },
+    {
+      "id": "11",
+      "name": "Hive Pre-Workout Ripped",
+      "category": "Bodybuilding",
+      "price": 2999,
+      "image": "/Images/Pre-Workout Ripped.jpg",
+      "description": "Combines pre-workout energy and focus with a powerful thermogenic blend for fat burning.",
+      "nutritionFacts": {
+        "servingSize": "1 Scoop (12g)",
+        "caffeine": "150mg",
+        "lCarnitine": "500mg"
+      },
+      "isActive": true
+    },
+    {
+      "id": "12",
+      "name": "Hive Ripped Thermogenic Fat Burner",
+      "category": "Fat Burning",
+      "price": 2899,
+      "image": "/Images/Ripped Thermogenic Fat Burner.avif",
+      "description": "A powerful thermogenic formula to boost metabolism, increase energy, and support fat loss.",
+      "nutritionFacts": {
+        "servingSize": "2 Capsules",
+        "caffeine": "200mg",
+        "greenTeaExtract": "250mg"
+      },
+      "isActive": true
+    },
+    {
+      "id": "13",
+      "name": "Hive Shred L-Carnitine Liquid",
+      "category": "Fat Burning",
+      "price": 1799,
+      "image": "/Images/Shred L-Carnitine Liquid.jpg",
+      "description": "Stimulant-free fat metabolizer that helps convert fat into energy. Delicious tangy flavor.",
+      "nutritionFacts": {
+        "servingSize": "1 Tablespoon (15ml)",
+        "lCarnitine": "1500mg"
+      },
+      "isActive": true
+    },
+    {
+      "id": "14",
+      "name": "Hive Thermo CLA Elite",
+      "category": "Fat Burning",
+      "price": 2299,
+      "image": "/Images/Thermo CLA Elite.avif",
+      "description": "A blend of Conjugated Linoleic Acid (CLA) and thermogenics to support metabolism and body composition.",
+      "nutritionFacts": {
+        "servingSize": "2 Softgels",
+        "claBlend": "2000mg"
+      },
+      "isActive": true
+    },
+    {
+      "id": "15",
+      "name": "Hive Burn 60™ Metabolism Booster",
+      "category": "Fat Burning",
+      "price": 1999,
+      "image": "/Images/Burn 60™ Metabolism Booster.jpg",
+      "description": "Clinically proven to increase calorie burning by up to 60%. Take before your workout for best results.",
+      "nutritionFacts": {
+        "servingSize": "2 Tablets",
+        "guaranaExtract": "495mg"
+      },
+      "isActive": true
+    },
+    {
+      "id": "16",
+      "name": "Hive Apple Cider Vinegar Gummies",
+      "category": "Fat Burning",
+      "price": 1499,
+      "image": "/Images/Apple Cider Vinegar Gummies.jpg",
+      "description": "All the benefits of apple cider vinegar without the sour taste. Supports digestion and metabolism.",
+      "nutritionFacts": {
+        "servingSize": "2 Gummies",
+        "appleCiderVinegar": "500mg"
+      },
+      "isActive": true
+    },
+    {
+      "id": "17",
+      "name": "Hive Water Pill for Bloating Relief",
+      "category": "Fat Burning",
+      "price": 899,
+      "image": "/Images/Water Pill for Bloating Relief.jpg",
+      "description": "An all-natural herbal blend to help manage water balance and reduce bloating.",
+      "nutritionFacts": {
+        "servingSize": "1 Capsule",
+        "dandelionRoot": "100mg"
+      },
+      "isActive": true
+    },
+    {
+      "id": "18",
+      "name": "Hive Total Lean Meal Replacement Shake",
+      "category": "Meal Replacement",
+      "price": 3299,
+      "image": "/Images/Total Lean Meal Replacement Shake.webp",
+      "description": "A delicious, nutrient-packed shake to replace a meal, support weight management, and satisfy hunger.",
+      "nutritionFacts": {
+        "servingSize": "2 Scoops (52g)",
+        "calories": 200,
+        "protein": "25g",
+        "fiber": "8g"
+      },
+      "isActive": true
+    },
+    {
+      "id": "19",
+      "name": "Hive Lean Bar (Chocolate Brownie)",
+      "category": "Meal Replacement",
+      "price": 249,
+      "image": "/Images/Lean Bar (Chocolate Brownie).jpg",
+      "description": "A high-protein, high-fiber bar that's perfect as a snack or small meal replacement on the go.",
+      "nutritionFacts": {
+        "servingSize": "1 Bar (60g)",
+        "calories": 210,
+        "protein": "20g",
+        "fiber": "10g"
+      },
+      "isActive": true
+    },
+    {
+      "id": "20",
+      "name": "Hive Keto Meal Shake",
+      "category": "Meal Replacement",
+      "price": 3799,
+      "image": "/Images/Keto Meal Shake.webp",
+      "description": "A ketogenic-friendly meal replacement with high fats, moderate protein, and low net carbs.",
+      "nutritionFacts": {
+        "servingSize": "1 Scoop (45g)",
+        "calories": 200,
+        "protein": "15g",
+        "netCarbs": "4g",
+        "fats": "14g"
+      },
+      "isActive": true
+    },
+    {
+      "id": "21",
+      "name": "Hive Instant High-Protein Oatmeal",
+      "category": "Meal Replacement",
+      "price": 1599,
+      "image": "/Images/Instant High-Protein Oatmeal.webp",
+      "description": "Start your day strong with this protein-packed oatmeal. A quick, warm, and satisfying meal.",
+      "nutritionFacts": {
+        "servingSize": "1 Packet (50g)",
+        "calories": 190,
+        "protein": "20g",
+        "fiber": "7g"
+      },
+      "isActive": true
+    },
+    {
+      "id": "22",
+      "name": "Hive Lean Shake Burn (Strawberry)",
+      "category": "Meal Replacement",
+      "price": 3499,
+      "image": "/Images/Lean Shake Burn (Strawberry).jpg",
+      "description": "A meal replacement shake with an added thermogenic blend to help you burn calories while staying full.",
+      "nutritionFacts": {
+        "servingSize": "2 Scoops (55g)",
+        "calories": 200,
+        "protein": "30g",
+        "fatBurningBlend": "500mg"
+      },
+      "isActive": true
+    },
+    {
+      "id": "23",
+      "name": "Hive High Protein Pancake Mix",
+      "category": "Meal Replacement",
+      "price": 1999,
+      "image": "/Images/High Protein Pancake Mix.webp",
+      "description": "A healthy and delicious way to start your day. Just add water for fluffy, protein-packed pancakes.",
+      "nutritionFacts": {
+        "servingSize": "2 Scoops (57g)",
+        "calories": 200,
+        "protein": "20g"
+      },
+      "isActive": true
+    },
+    {
+      "id": "24",
+      "name": "Hive Men's Mega Multi Vitamin",
+      "category": "For Men",
+      "price": 1499,
+      "image": "/Images/mega men sports multivitamin.webp",
+      "description": "A comprehensive multivitamin tailored for men's health, supporting energy, immunity, and overall wellness.",
+      "nutritionFacts": {
+        "servingSize": "2 Tablets",
+        "vitaminD": "1600 IU",
+        "vitaminB12": "50mcg",
+        "zinc": "25mg"
+      },
+      "isActive": true
+    },
+    {
+      "id": "25",
+      "name": "Hive Prostate Health Formula",
+      "category": "For Men",
+      "price": 1899,
+      "image": "/Images/Prostate Health Formula.jpg",
+      "description": "With Saw Palmetto and Lycopene to support normal prostate function and urinary flow.",
+      "nutritionFacts": {
+        "servingSize": "2 Softgels",
+        "sawPalmetto": "320mg",
+        "lycopene": "15mg"
+      },
+      "isActive": true
+    },
+    {
+      "id": "26",
+      "name": "Hive Test-X Testosterone Support",
+      "category": "For Men",
+      "price": 2999,
+      "image": "/Images/Test-X Testosterone Support.webp",
+      "description": "A natural testosterone support complex with Tribulus and Fenugreek to support vitality and performance.",
+      "nutritionFacts": {
+        "servingSize": "3 Capsules",
+        "tribulusTerrestris": "1000mg",
+        "fenugreek": "600mg"
+      },
+      "isActive": true
+    },
+    {
+      "id": "27",
+      "name": "Hive Men's Endurance Vitapak®",
+      "category": "For Men",
+      "price": 3599,
+      "image": "/Images/Men's Endurance Vitapak®.webp",
+      "description": "An all-in-one supplement pack designed for active men to support performance, circulation, and joint health.",
+      "nutritionFacts": {
+        "servingSize": "1 Pack",
+        "contains": "Multivitamin, BCAA, L-Arginine"
+      },
+      "isActive": true
+    },
+    {
+      "id": "28",
+      "name": "Hive Joint Support for Men",
+      "category": "For Men",
+      "price": 2199,
+      "image": "/Images/Joint Support for Men.webp",
+      "description": "Features Glucosamine, Chondroitin, and MSM to support joint flexibility, mobility, and comfort.",
+      "nutritionFacts": {
+        "servingSize": "3 Tablets",
+        "glucosamine": "1500mg",
+        "chondroitin": "1200mg"
+      },
+      "isActive": true
+    },
+    {
+      "id": "29",
+      "name": "Hive Sleep Support for Men with Melatonin",
+      "category": "For Men",
+      "price": 1399,
+      "image": "/Images/Sleep Support for Men with Melatonin.jpg",
+      "description": "Promotes restful sleep and relaxation, helping you recover and perform at your best.",
+      "nutritionFacts": {
+        "servingSize": "1 Tablet",
+        "melatonin": "5mg",
+        "gaba": "100mg"
+      },
+      "isActive": true
+    },
+    {
+      "id": "30",
+      "name": "Hive Women's Ultra Mega Wellness",
+      "category": "For Women",
+      "price": 1599,
+      "image": "/Images/Women's Ultra Mega Wellness.jpg",
+      "description": "Specially formulated for women to support bone health, immunity, and beauty from within.",
+      "nutritionFacts": {
+        "servingSize": "2 Caplets",
+        "biotin": "300mcg",
+        "calcium": "500mg",
+        "iron": "18mg"
+      },
+      "isActive": true
+    },
+    {
+      "id": "31",
+      "name": "Hive Hair, Skin & Nails Formula",
+      "category": "For Women",
+      "price": 1199,
+      "image": "/Images/Hair, Skin & Nails Formula.webp",
+      "description": "Contains Biotin, Collagen, and antioxidants to support lustrous hair, strong nails, and vibrant skin.",
+      "nutritionFacts": {
+        "servingSize": "2 Caplets",
+        "biotin": "3000mcg",
+        "collagen": "100mg"
+      },
+      "isActive": true
+    },
+    {
+      "id": "32",
+      "name": "Hive Prenatal Formula with DHA",
+      "category": "For Women",
+      "price": 2099,
+      "image": "/Images/Prenatal Formula with DHA.jpg",
+      "description": "A complete multivitamin for expecting mothers, providing essential nutrients for mother and baby.",
+      "nutritionFacts": {
+        "servingSize": "2 Softgels",
+        "folicAcid": "800mcg",
+        "iron": "27mg",
+        "dha": "200mg"
+      },
+      "isActive": true
+    },
+    {
+      "id": "33",
+      "name": "Hive Women's Calcium Plus with Magnesium",
+      "category": "For Women",
+      "price": 999,
+      "image": "/Images/Women's Calcium Plus with Magnesium.jpg",
+      "description": "Supports strong bones and teeth. Contains Vitamin D and Magnesium for enhanced calcium absorption.",
+      "nutritionFacts": {
+        "servingSize": "3 Caplets",
+        "calcium": "1000mg",
+        "magnesium": "500mg",
+        "vitaminD": "800 IU"
+      },
+      "isActive": true
+    },
+    {
+      "id": "34",
+      "name": "Hive Menopause Formula",
+      "category": "For Women",
+      "price": 1799,
+      "image": "/Images/Menopause Formula.jpg",
+      "description": "A balanced formula with Black Cohosh and Soy Isoflavones to help manage menopause symptoms.",
+      "nutritionFacts": {
+        "servingSize": "2 Capsules",
+        "blackCohosh": "80mg",
+        "soyIsoflavones": "100mg"
+      },
+      "isActive": true
+    },
+    {
+      "id": "35",
+      "name": "Hive Cranberry & D-Mannose for Urinary Health",
+      "category": "For Women",
+      "price": 1699,
+      "image": "/Images/Cranberry & D-Mannose for Urinary Health.webp",
+      "description": "A powerful combination to support a healthy urinary tract and bladder function in women.",
+      "nutritionFacts": {
+        "servingSize": "2 Capsules",
+        "cranberryConcentrate": "500mg",
+        "dMannose": "1000mg"
+      },
+      "isActive": true
+    },
+    {
+      "id": "36",
+      "name": "Hive Glow Collagen Peptides",
+      "category": "Skin Care",
+      "price": 2199,
+      "image": "/Images/Glow Collagen Peptides.webp",
+      "description": "Supports skin hydration and elasticity. Unflavored and easy to mix into any beverage.",
+      "nutritionFacts": {
+        "servingSize": "1 Scoop (20g)",
+        "calories": 70,
+        "protein": "18g",
+        "collagen": "20g"
+      },
+      "isActive": true
+    },
+    {
+      "id": "37",
+      "name": "Hive Radiance Hyaluronic Acid",
+      "category": "Skin Care",
+      "price": 1899,
+      "image": "/Images/Radiance Hyaluronic Acid.jpg",
+      "description": "Helps maintain skin moisture and elasticity, supporting a smooth and youthful appearance.",
+      "nutritionFacts": {
+        "servingSize": "1 Capsule",
+        "hyaluronicAcid": "100mg"
+      },
+      "isActive": true
+    },
+    {
+      "id": "38",
+      "name": "Hive Shield Glutathione Capsules",
+      "category": "Skin Care",
+      "price": 2499,
+      "image": "/Images/Shield Glutathione Capsules.webp",
+      "description": "A powerful antioxidant that supports detoxification and helps brighten the skin complexion.",
+      "nutritionFacts": {
+        "servingSize": "1 Capsule",
+        "lGlutathione": "500mg"
+      },
+      "isActive": true
+    },
+    {
+      "id": "39",
+      "name": "Hive Clear Skin Probiotic Formula",
+      "category": "Skin Care",
+      "price": 2999,
+      "image": "/Images/Clear Skin Probiotic Formula.webp",
+      "description": "A targeted probiotic blend that supports a healthy gut-skin axis for a clearer complexion.",
+      "nutritionFacts": {
+        "servingSize": "1 Capsule",
+        "probioticBlend": "10 Billion CFU"
+      },
+      "isActive": true
+    },
+    {
+      "id": "40",
+      "name": "Hive Ageless Eye Cream (Oral Supplement)",
+      "category": "Skin Care",
+      "price": 2599,
+      "image": "/Images/Ageless Eye Cream (Oral Supplement).webp",
+      "description": "A unique oral supplement with Lutein and Zeaxanthin to support skin health around the eyes.",
+      "nutritionFacts": {
+        "servingSize": "1 Capsule",
+        "lutein": "20mg",
+        "zeaxanthin": "4mg"
+      },
+      "isActive": true
+    },
+    {
+      "id": "41",
+      "name": "Hive Pure Vegan Plant Protein",
+      "category": "Vegetarian",
+      "price": 3599,
+      "image": "/Images/Pure Vegan Plant Protein.jpg",
+      "description": "A high-quality protein blend from pea and brown rice. Dairy, soy, and gluten-free.",
+      "nutritionFacts": {
+        "servingSize": "1 Scoop (35g)",
+        "calories": 130,
+        "protein": "20g",
+        "carbs": "5g"
+      },
+      "isActive": true
+    },
+    {
+      "id": "42",
+      "name": "Hive Green Omega-3 (Algae-Based)",
+      "category": "Vegetarian",
+      "price": 1999,
+      "image": "/Images/Green Omega-3 (Algae-Based).png",
+      "description": "A vegan source of essential Omega-3 fatty acids (EPA/DHA) derived from marine algae.",
+      "nutritionFacts": {
+        "servingSize": "1 Softgel",
+        "algalOil": "500mg",
+        "dha": "150mg",
+        "epa": "75mg"
+      },
+      "isActive": true
+    },
+    {
+      "id": "43",
+      "name": "Hive Vitality B-12 Vegan Liquid",
+      "category": "Vegetarian",
+      "price": 999,
+      "image": "/Images/Vitality B-12 Vegan Liquid.jpg",
+      "description": "A high-potency, fast-absorbing Vitamin B-12 liquid essential for energy metabolism and nerve function.",
+      "nutritionFacts": {
+        "servingSize": "1 Dropperful (1ml)",
+        "vitaminB12": "1000mcg"
+      },
+      "isActive": true
+    },
+    {
+      "id": "44",
+      "name": "Hive Organic Vegan Iron",
+      "category": "Vegetarian",
+      "price": 1299,
+      "image": "/Images/Organic Vegan Iron.webp",
+      "description": "A whole-food based, non-constipating iron supplement to support energy and red blood cell production.",
+      "nutritionFacts": {
+        "servingSize": "1 Capsule",
+        "iron": "25mg",
+        "vitaminC": "60mg"
+      },
+      "isActive": true
+    },
+    {
+      "id": "45",
+      "name": "Hive Vegan Vitamin D3 Gummies",
+      "category": "Vegetarian",
+      "price": 1199,
+      "image": "/Images/Vegan Vitamin D3 Gummies.avif",
+      "description": "Delicious, chewable Vitamin D3 sourced from lichen, not lanolin. Supports bone and immune health.",
+      "nutritionFacts": {
+        "servingSize": "2 Gummies",
+        "vitaminD3": "2000 IU"
+      },
+      "isActive": true
+    }
+  ]
+}

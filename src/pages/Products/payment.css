@@ -1,0 +1,97 @@
+.payment-page-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.payment-layout {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* --- Order Summary (Unchanged) --- */
+.order-summary-section {
+    flex: 1;
+    min-width: 300px;
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    height: fit-content;
+}
+.order-summary-section h2 { margin-top: 0; border-bottom: 1px solid #ccc; padding-bottom: 15px; margin-bottom: 20px; }
+.summary-item { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
+.summary-item-image { width: 50px; height: 50px; object-fit: contain; border-radius: 5px; border: 1px solid #eee; }
+.summary-item-details { flex-grow: 1; }
+.summary-item-details p { margin: 0; }
+.summary-total { display: flex; justify-content: space-between; font-size: 1.2rem; margin-top: 20px; padding-top: 20px; border-top: 1px solid #ccc; }
+
+/* --- NEW: Payment Method Selection --- */
+.payment-form-section {
+    flex: 1.5;
+    min-width: 320px;
+}
+
+.payment-form-section h2 {
+    margin-top: 0;
+}
+
+.payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.payment-option:hover {
+    border-color: #4CAF50;
+}
+
+.payment-option.selected {
+    border-color: #4CAF50;
+    background-color: #f0fff0;
+    font-weight: bold;
+}
+
+.payment-option span {
+    flex-grow: 1;
+    font-size: 1.1rem;
+}
+
+/* Hide the default radio button */
+.payment-option input[type="radio"] {
+    display: none;
+}
+
+.pay-now-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.pay-now-btn:hover {
+    background-color: #45a049;
+}
+.pay-now-btn:disabled {
+    background-color: #a5d6a7;
+    cursor: not-allowed;
+}

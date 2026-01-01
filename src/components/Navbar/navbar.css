@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e8f5e9; 
+  color: #006b3c;
+  padding: 10px 25px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  flex-wrap: wrap;        
+  gap: 15px; 
+  font-family: "Poppins", sans-serif;            
+}
+.nav-links {
+  display: flex;
+  gap: 50px;            
+  margin-left: auto;    
+  align-items: center;
+  margin-right: 60px; 
+}
+.nav-links a {
+  font-weight: 600;
+  font-size: 17px;      
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.nav-links a:hover {
+  color: #00a86b;
+}
+nav img {
+  width: 140px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+nav a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: #00a86b; 
+}
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;  
+  gap: 35px;        
+  margin-left: auto;
+}
+.nav-search {
+  margin-left: 20px;
+}
+.nav-search input {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 14px;
+  width: 200px;
+  transition: all 0.3s ease;
+}
+.nav-search input:focus {
+  outline: none;
+  border-color: #00a86b;
+  box-shadow: 0px 0px 6px rgba(0, 168, 107, 0.4);
+  width: 240px; 
+}
+.nav-auth {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.welcome-message {
+  font-weight: 600;
+  color: #444;
+  font-size: 15px;
+}
+.logout-button {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.logout-button:hover {
+  background: #c0392b;
+}
+.nav-auth a {
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.nav-auth a:first-child {
+  background: #00a86b;
+  color: #fff;
+}
+.nav-auth a:first-child:hover {
+  background: #008f5a;
+}
+.nav-auth a:last-child {
+  background: #ff9800;
+  color: #fff;
+}
+.nav-auth a:last-child:hover {
+  background: #e68900;
+}

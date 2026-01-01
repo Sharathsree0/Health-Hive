@@ -1,0 +1,116 @@
+.home-container {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+.hero-section {
+    position: relative;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Images/whey-website-banner-1.webp');
+    background-size: cover;
+    background-position: center;
+}
+.hero-content h1 { font-size: 3rem; margin-bottom: 1rem; }
+.hero-content p { font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; }
+.cta-button {
+    background-color: #4CAF50; color: white; padding: 15px 30px;
+    border-radius: 5px; text-decoration: none; font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.cta-button:hover { background-color: #45a049; 
+}
+.featured-products-section {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+}
+.featured-products-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+.featured-products-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.featured-product-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: #333;
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.featured-product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+.featured-product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+.featured-product-card h3 {
+    font-size: 1.2rem;
+    min-height: 50px;
+    margin-bottom: 0.5rem;
+}
+.featured-product-card p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #4CAF50;
+}
+.categories-section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+.categories-section h2 { font-size: 2.5rem; margin-bottom: 2rem; }
+.category-list {
+    display: flex; justify-content: center;
+    gap: 1.5rem; flex-wrap: wrap;
+}
+.category-card {
+    position: relative; width: 250px; height: 350px;
+    border-radius: 10px; overflow: hidden; color: white;
+    text-decoration: none; box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff;
+    padding: 10px;
+    border: 1px solid #eee;
+}
+.category-card:hover { transform: translateY(-10px); box-shadow: 0 8px 16px rgba(0,0,0,0.2); }
+.category-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+.category-card:hover img { transform: scale(1.05); }
+.category-name {
+    position: absolute; bottom: 0; left: 0; width: 100%;
+    padding: 1rem; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    font-size: 1.5rem; font-weight: bold; text-align: left;
+}
+.main-footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 3rem 2rem 1.5rem;
+}
+.footer-bottom {
+    text-align: center; padding-top: 1.5rem;
+    border-top: 1px solid #34495e;
+    font-size: 0.9rem;
+}
+@media (max-width: 768px) {
+    .hero-content h1 { font-size: 2rem; }
+    .footer-content { flex-direction: column; }
+}
