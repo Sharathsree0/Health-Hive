@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { useAuth } from "./authcontext";
-import api from "../../utils/api.js";
+import api from "../../utils/api";
 import { toast } from "react-toastify";
+import { useAuth } from "./authcontext";
 
 const CartContext = createContext();
 
@@ -9,14 +9,12 @@ export const CartProvider = ({ children }) => {
   const { isLogged } = useAuth();
   const [cartItems, setCartItems] = useState([]);
 
-  // 1️⃣ Fetch cart
   const fetchCart = async () => {
     if (!isLogged) return;
-
     try {
       const res = await api.get("/cart");
       setCartItems(res.data.items || []);
-    } catch (err) {
+    } catch {
       toast.error("Failed to fetch cart");
     }
   };
@@ -25,46 +23,23 @@ export const CartProvider = ({ children }) => {
     fetchCart();
   }, [isLogged]);
 
-  // 2️⃣ Add to cart
   const addToCart = async (productId) => {
-    try {
-      await api.post("/cart/add", { productId });
-      fetchCart();
-      toast.success("Added to cart");
-    } catch (err) {
-      toast.error("Add to cart failed");
-    }
+    await api.post("/cart/add", { productId });
+    fetchCart();
   };
 
-  // 3️⃣ Decrease qty / remove
   const decreaseQuantity = async (productId) => {
-    try {
-      await api.post("/cart/decrease", { productId });
-      fetchCart();
-    } catch (err) {
-      toast.error("Update failed");
-    }
+    await api.post("/cart/decrease", { productId });
+    fetchCart();
   };
 
   const removeFromCart = async (productId) => {
-    try {
-      await api.delete(`/cart/remove/${productId}`);
-      fetchCart();
-    } catch (err) {
-      toast.error("Remove failed");
-    }
+    await api.delete(`/cart/remove/${productId}`);
+    fetchCart();
   };
 
   return (
-    <CartContext.Provider
-      value={{
-        cartItems,
-        addToCart,
-        decreaseQuantity,
-        removeFromCart,
-        fetchCart,
-      }}
-    >
+    <CartContext.Provider value={{ cartItems, addToCart, decreaseQuantity, removeFromCart }}>
       {children}
     </CartContext.Provider>
   );

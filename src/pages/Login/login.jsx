@@ -46,7 +46,7 @@ localStorage.setItem("token", token);
 localStorage.setItem("user", JSON.stringify(user));
 
 toast.success("Login Successful!");
-login(res.data);
+login({ token, user }); 
 
       } catch (err) {
         console.error("An error occurred during login:", err);

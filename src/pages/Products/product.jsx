@@ -1,82 +1,89 @@
-import React, { useEffect, useState, useMemo } from 'react';
-import axios from 'axios';
-import { useCart } from '../Context/cartcontext';
-import { useWishlist } from '../Context/wishlistcontext';
-import { FaShoppingCart, FaHeart, FaRegHeart } from 'react-icons/fa';
-import { useSearchParams, Link } from 'react-router-dom';
-import ReactPaginate from 'react-paginate';
-import './product.css';
+import React, { useEffect, useState, useMemo } from "react";
+import axios from "axios";
+import { useCart } from "../Context/cartcontext";
+import { useWishlist } from "../Context/wishlistcontext";
+import { FaShoppingCart, FaHeart, FaRegHeart } from "react-icons/fa";
+import { useSearchParams, Link } from "react-router-dom";
+import ReactPaginate from "react-paginate";
+import "./product.css";
 
 export default function Products() {
   const [products, setProducts] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [sortOrder, setSortOrder] = useState('default');
+  const [searchTerm, setSearchTerm] = useState("");
+  const [sortOrder, setSortOrder] = useState("default");
   const [searchParams, setSearchParams] = useSearchParams();
-
-  const [currentpage, setcurrentpage] = useState(0); 
-  const [productsperpage] = useState(6);
-
+  const [currentPage, setCurrentPage] = useState(0);
+  const productsPerPage = 6;
   const { addToCart } = useCart();
   const { wishlistItems, addToWishlist, removeFromWishlist } = useWishlist();
+  const categoryFilter = searchParams.get("category");
 
-  const categoryFilter = searchParams.get('category');
-
+  /* ================= FETCH PRODUCTS ================= */
   useEffect(() => {
-    axios.get("http://localhost:5000/api/products")
-      .then(res => setProducts(res.data))
-      .catch(err => console.error("Failed to fetch products:", err));
+    axios
+      .get("http://localhost:5000/api/products")
+      .then((res) => setProducts(res.data))
+      .catch((err) => console.error("Failed to fetch products:", err));
   }, []);
 
+  /* ================= CATEGORIES ================= */
   const allCategories = useMemo(() => {
-    return [...new Set(products.map(p => p.category))];
+    return [...new Set(products.map((p) => p.category))];
   }, [products]);
 
-  const displayedProducts = useMemo(() => {
-    let filtered = [...products.filter(p => p.isActive)];
+  /* ================= FILTER + SORT ================= */
+  const filteredProducts = useMemo(() => {
+    let list = products.filter((p) => p.isActive);
+
     if (categoryFilter) {
-      filtered = filtered.filter(p => p.category === categoryFilter);
+      list = list.filter((p) => p.category === categoryFilter);
     }
 
     if (searchTerm) {
-      filtered = filtered.filter(p =>
-        p.name.toLowerCase().includes(searchTerm.toLowerCase())
+      list = list.filter((p) =>
+        p.title.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
 
-    if (sortOrder === 'low-to-high') {
-      filtered = [...filtered].sort((a, b) => a.price - b.price);
-    } else if (sortOrder === 'high-to-low') {
-      filtered = [...filtered].sort((a, b) => b.price - a.price);
+    if (sortOrder === "low-to-high") {
+      list = [...list].sort((a, b) => a.price - b.price);
+    } else if (sortOrder === "high-to-low") {
+      list = [...list].sort((a, b) => b.price - a.price);
     }
 
-    return filtered;
+    return list;
   }, [products, categoryFilter, searchTerm, sortOrder]);
-  
 
-  const offset = currentpage * productsperpage;
-  const currentProducts = displayedProducts.slice(offset, offset + productsperpage);
-  const pageCount = Math.ceil(displayedProducts.length / productsperpage);
+  /* ================= PAGINATION ================= */
+  const offset = currentPage * productsPerPage;
+  const currentProducts = filteredProducts.slice(
+    offset,
+    offset + productsPerPage
+  );
+  const pageCount = Math.ceil(filteredProducts.length / productsPerPage);
 
   const handlePageClick = ({ selected }) => {
-    setcurrentpage(selected);
+    setCurrentPage(selected);
   };
 
   const handleCategoryClick = (category) => {
     setSearchParams({ category });
-    setcurrentpage(0); 
+    setCurrentPage(0);
   };
 
   const clearFilters = () => {
     setSearchParams({});
-    setSearchTerm('');
-    setSortOrder('default');
-    setcurrentpage(0);
+    setSearchTerm("");
+    setSortOrder("default");
+    setCurrentPage(0);
   };
 
+  /* ================= UI ================= */
   return (
     <div className="container">
       <h2 className="heading">Our Products</h2>
 
+      {/* SEARCH + SORT */}
       <div className="filter-controls">
         <input
           type="text"
@@ -85,6 +92,7 @@ export default function Products() {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
+
         <select
           className="sort-dropdown"
           value={sortOrder}
@@ -96,48 +104,74 @@ export default function Products() {
         </select>
       </div>
 
+      {/* CATEGORY FILTER */}
       <div className="category-filter-bar">
         <ul className="category-list">
-          <li><button onClick={clearFilters}>All Products</button></li>
-          {allCategories.map(category => (
+          <li>
+            <button onClick={clearFilters}>All Products</button>
+          </li>
+          {allCategories.map((category) => (
             <li key={category}>
-              <button onClick={() => handleCategoryClick(category)}>{category}</button>
+              <button onClick={() => handleCategoryClick(category)}>
+                {category}
+              </button>
             </li>
           ))}
         </ul>
       </div>
 
-      {categoryFilter && (
-        <div className="filter-header">
-          Showing: <strong>{categoryFilter}</strong>
-        </div>
-      )}
-
+      {/* PRODUCTS GRID */}
       <ul className="list">
-        {currentProducts.map(product => {
-          const isInWishlist = wishlistItems.some(item => item.id === product.id);
+        {currentProducts.map((product) => {
+          const isInWishlist = wishlistItems.some(
+            (item) => item.id === product._id
+          );
+
+          const imageUrl =
+            product.images?.[0]?.url ||
+            "https://via.placeholder.com/300x300?text=No+Image";
 
           return (
-            <li key={product.id} className="card">
+            <li key={product._id} className="card">
               <div className="card-image-container">
-                <img src={product.image} alt={product.name} className="image" />
+                <img
+                  src={imageUrl}
+                  alt={product.title}
+                  className="image"
+                />
+
                 <div
                   className="wishlist-icon"
                   onClick={() =>
                     isInWishlist
-                      ? removeFromWishlist(product.id)
+                      ? removeFromWishlist(product._id)
                       : addToWishlist(product)
                   }
                 >
-                  {isInWishlist ? <FaHeart color="#e74c3c" /> : <FaRegHeart />}
+                  {isInWishlist ? (
+                    <FaHeart color="#e74c3c" />
+                  ) : (
+                    <FaRegHeart />
+                  )}
                 </div>
               </div>
-              <h3 className="title">{product.name}</h3>
+
+              <h3 className="title">{product.title}</h3>
               <p className="category">{product.category}</p>
               <p className="price">₹{product.price}</p>
+
               <div className="card-buttons">
-                <Link to={`/products/${product.id}`} className="view-button">View</Link>
-                <button className="add-to-cart" onClick={() => addToCart(product)}>
+                <Link
+                  to={`/products/${product._id}`}
+                  className="view-button"
+                >
+                  View
+                </Link>
+
+                <button
+                  className="add-to-cart"
+                  onClick={() => addToCart(product._id)}
+                >
                   <FaShoppingCart /> Add to Cart
                 </button>
               </div>
@@ -146,19 +180,13 @@ export default function Products() {
         })}
       </ul>
 
-      {/* Pagination */}
+      {/* PAGINATION */}
       <ReactPaginate
         previousLabel={"← Previous"}
         nextLabel={"Next →"}
         pageCount={pageCount}
         onPageChange={handlePageClick}
         containerClassName={"pagination"}
-        pageClassName={"page-item"}
-        pageLinkClassName={"page-link"}
-        previousClassName={"page-item"}
-        previousLinkClassName={"page-link"}
-        nextClassName={"page-item"}
-        nextLinkClassName={"page-link"}
         activeClassName={"active"}
       />
     </div>

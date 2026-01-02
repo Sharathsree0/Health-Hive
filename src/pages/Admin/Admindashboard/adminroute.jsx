@@ -1,29 +1,14 @@
-import React, { useEffect } from 'react'
-import { useAuth } from '../../Context/authcontext'
-import { Navigate } from 'react-router-dom'
-import { toast } from 'react-toastify'
+import { Navigate } from "react-router-dom";
+import { useAuth } from "../../Context/authcontext";
 
-export default function Adminroute({children}) {
-    const{isLogged,user,authLoading}=useAuth()
-          if (authLoading){return <div>Authenticating...</div>;}
-    useEffect(()=>{
-      if(isLogged && user && !user.isAdmin){
-        toast.error("Access Denied: You are not an administrator.")
-      }
-    })    
-    if (isLogged && !user) {
-    return <div>Loading user...</div>;
-  }
+export default function AdminRoute({ children }) {
+  const { isLogged, user, authLoading } = useAuth();
 
-    if(!isLogged ){
-return <Navigate to="/login" />
-    }
-    if(!user||!user.isAdmin){
-      toast.error("Access Denied: You are not an Administractor.")
-  return <Navigate to="/" />
-    }
+  if (authLoading) return <div>Authenticating...</div>;
 
+  if (!isLogged) return <Navigate to="/login" />;
 
-  return  children;
-  
+  if (!user?.isAdmin) return <Navigate to="/" />;
+
+  return children;
 }
